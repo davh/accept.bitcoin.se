@@ -4842,7 +4842,7 @@
 
 		.jumbotron { margin: 60px 0; text-align: center; }
 		.header { font-size: 72px; line-height: 1; margin-bottom: 15px; }
-		.headersmall { font-size: 64px; line-height: 1; margin-bottom: 15px; }
+		.headersmall { font-size: 60px; line-height: 1; margin-bottom: 15px; }
 		.lead { margin-top: 15px; }
 		
 		.marketing { margin: 60px 0; }
@@ -4908,8 +4908,11 @@
 						<li><a onclick="ninja.translator.translate('de')">Deutsch</a></li>
 						<li><a onclick="ninja.translator.translate('en')">English</a></li>
 						<li><a onclick="ninja.translator.translate('es')">Español</a></li>
+						<li><a onclick="ninja.translator.translate('fr')">Français</a></li>
+						<li><a onclick="ninja.translator.translate('it')">Italiano</a></li>
 						<li><a onclick="ninja.translator.translate('pl')">Polski</a></li>
 						<li><a onclick="ninja.translator.translate('pt-br')">Português Brasileiro</a></li>
+<!--						<li><a onclick="ninja.translator.translate('ru')">Русский</a></li> -->
 						<li><a onclick="ninja.translator.translate('sk')">Slovensky</a></li>
 						<li><a onclick="ninja.translator.translate('sv')">Svenska</a></li>
 					</ul>
@@ -5259,7 +5262,7 @@
 					ninja.translator.currentCulture = culture;
 					document.title = dict["header"];
 					
-					var smallHeader = culture == "de" || culture == "pl";
+					var smallHeader = culture == "de" || culture == "pl" || culture == "fr";
 					$("#header").removeClass();
 					$("#header").addClass(smallHeader ? "headersmall" : "header");
 					
@@ -5413,6 +5416,68 @@
 					"pleaseenternewtext" : "Cambia el texto:"
 				},
 				
+				"fr" : {
+					"selectedlanguage": "Français",
+					"header": "Acceptez les dons Bitcoin dès aujourd'hui!",
+					"lead": "En fait, tout sera prêt en une minute seulement, c'est aussi simple que cela. Appuyez sur le bouton d'impression ci-dessous pour imprimer la page. Coupez le long des pointillés et gardez la partie inférieure dans un endroit sûr. Placez la partie supérieure sur un mur. Voilà, vous avez terminé.",
+					"printbutton": "Imprimer",
+					"learnmorebutton" : "En savoir plus",
+					"printpagetitle" : "Nous acceptons<br/>les dons Bitcoin",
+					"printpagetitletooltip" : "Cliquez pour changer ce texte",
+					"btcaddresslabel" : "Pour faire un don, veuillez scanner les QR code sur la gauche ou bien envoyer les bitcoins à l'adresse suivante:",
+					"btcaddresslabeltooltip" : "Cliquez pour changer ce texte",
+					"generatelabelbitcoinaddress" : "Une nouvelle adresse Bitcoin est générée pour vous !",
+					"generatelabelmovemouse" : "Veuillez déplacer votre souris afin de rendre le processus de génération encore plus aléatoire...",
+					"publicareaintro" : "Bitcoin est une monnaie numérique, accessible à tous, partout dans le monde. Elle est open source et décentralisée, non contrôlée par une unique entité. Elle peut être envoyée entre des personnes sans l'intervention de banques ou de sociétés de cartes de crédit. Les transactions sont pratiquement instantanée et avec des frais très faibles, souvent totalement gratuit.",
+					"publicareaintrotooltip" : "Cliquez pour changer ce texte",
+					"publicareafooter" : "Recevoir des dons Bitcoin est simple ! Vous serez prêt à en recevoir en moins d'une minute en vous connectant sur : http://accept.bitcoin.se",
+					"singlelabelprivatekey" : "Ceci est votre clé privée. Elle est la clé donnant accès à votre argent, le <i> seul </ i> moyen de récupérer votre argent, alors assurez-vous de la garder en sécurité. Votre clé privée est représenté ici dans deux formats différents. A gauche comme un code QR et ci-dessous dans le \"format d'importation portefeuille \" qui peut être utilisé pour importer votre clé dans divers portefeuilles en ligne ou sur votre bureau.",
+					"privateareainfo" : "Si vous voulez vérifier le solde actuel de votre adresse, allez sur <a href='http://www.blockchain.info'>www.blockchain.info</a> et recherchez votre adresse Bitcoin (<b>pas</b> votre clé privée, gardez toujours la clé privée pour vous-même, l'adresse Bitcoin est celle sur la partie supérieure de cette page).",
+					"whatisbitcointitle" : "Qu'est-ce que Bitcoin?",
+					"whatisbitcointext" : "Bitcoin est une monnaie numérique, accessible à tous, partout dans le monde. Elle est open source et décentralisée, non contrôlée par une unique entité. Elle peut être envoyée entre des personnes sans l'intervention de banques ou de sociétés de cartes de crédit. Les transactions sont pratiquement instantanée et avec des frais très faibles, souvent totalement gratuit. Apprenez en plus à propos de Bitcoin sur <a href='http://www.weusecoins.com'>weusecoins.com</a> ou posez une question sur <a href='http://bitcoin.stackexchange.com'>Bitcoin StackExchange</a>.",
+					"payingfeestitle" : "Dois-je payer des frais ?",
+					"payingfeestext" : "En tant que bénéficiaire d'une transaction vous n'aurez jamais à payer de frais. La personne qui envoie les fonds doit <i>parfois</i> payer une légère taxe, mais avec Bitcoin celle-ci est en réalité <b>minuscule</b>, de l'ordre de quelques centimes.",
+					"isthissafetitle" : "Est-ce sécurisé ?",
+					"isthissafetext" : "Tout sur cette page est exécutée dans <b>votre propre navigateur internet</b> en utilisant javascript. Votre adresse Bitcoin et votre clé privée ont été générées par <b>votre ordinateur</b> et <b>n'ont pas été partagées</b> avec un autre ordinateur ou un être humain. (Vous pouvez même télécharger cette page et l'utiliser sur un ordinateur hors connexion.) Si vous gardez votre clé privée en sécurité, votre argent est en sécurité.",
+					"iwantrealmoneytitle" : "Mais je veux de l'argent \"réel\"",
+					"iwantrealmoneytext" : "Eh bien, tout d'abord, Bitcoin <i>est</i> de l'argent réel. Pensez à utiliser vos bitcoins pour acheter des marchandises auprès de l'un des <a href='https://en.bitcoin.it/wiki/Trade#Online_products'>magasins</a> qui acceptent Bitcoin. Si vous désirez toujours convertir vos bitcoins en dollars ou une autre monnaie, il existe de nombreuses façons de le faire. Consultez cette <a href='https://en.bitcoin.it/wiki/Trade#Currency_exchanges'>liste des échanges</a>.",
+					"howdoiusebitcointitle" : "Comment utiliser mes bitcoins?",
+					"howdoiusebitcointext" : "Pour utiliser vos bitcoins vous devez importer votre clé privée dans un portefeuille. Il ya beaucoup de portefeuilles différents, certains que vous téléchargez et exécutez sur votre propre ordinateur et d'autres qui sont hébergés sur le Web. Le plus simple est sans doute de créer un <a href='https://blockchain.info/wallet'> portefeuille sur blockchain.info </a> et ensuite de cliquer sur \"Importer / Exporter - Importer la Clef Privée \". En seulement quelques minutes vous serez prêt à envoyer vos bitcoins à n'importe qui, n'importe où dans le monde.",
+					"pleasedonate" : "Faites un don si vous aimez cette page:",
+					"pleaseenternewtext" : "Veuillez écrire un nouveau texte:"
+				},
+				
+				"it" : {
+					"selectedlanguage": "Italiano",
+					"header": "Accettare donazioni Bitcoin oggi!",
+					"lead": "In realtà, ti verrà impostato in un attimo, è così semplice. Premere il pulsante di stampa qui sotto per stampare la pagina. Tagliare lungo la linea tratteggiata e salvare la parte inferiore in un luogo sicuro. Mettere la parte superiore verso l\'alto su una parete. Il gioco è fatto. ",
+					"printbutton": "stampa",
+					"learnmorebutton" : "Per saperne di più",
+					"printpagetitle" : "Si accettano<br/> donazioni Bitcoin",
+					"printpagetitletooltip" : "Fare clic per modificare questo testo",
+					"btcaddresslabel" : "Per donare, si prega di effettuare la scansione del codice QR per la sinistra o inviare bitcoins al seguente indirizzo: ",
+					"btcaddresslabeltooltip" : "Fare clic per modificare questo testo",
+					"generatelabelbitcoinaddress" : "Un nuovo indirizzo di zecca Bitcoin è stato generato per voi!",
+					"generatelabelmovemouse" : "Perfavore, muovi il mouse per aggiungere un po \'di casualità in più per il processo di generazione ... ",
+					"publicareaintro" : "Bitcoin è una moneta digitale, a disposizione di tutti, in tutto il mondo. E \'open source e decentralizzato, non controllati da una stessa entità. Può essere inviati tra individui senza il coinvolgimento di banche o società di carte di credito. Le transazioni sono praticamente immediata e con commissioni molto basse, spesso completamente gratuito.",
+					"publicareaintrotooltip" : "Fare clic per modificare questo testo",
+					"publicareafooter" : "Ricevere donazioni Bitcoin è facile! Sarete pronti ad andare in meno di un minuto a: http://accept.bitcoin.se",
+					"singlelabelprivatekey" : "Questa è la tua chiave privata. Essa è la chiave per i vostri soldi, la <i> solo </ i> modo per recuperare i vostri soldi, quindi assicuratevi di tenerlo al sicuro. La chiave privata viene qui rappresentato in due formati differenti. A sinistra come un codice QR e seguito nella sezione \"formato di importazione portafogli \" \\ che può essere utilizzato per importare la vostra chiave in vari portafogli online o desktop.",
+					"privateareainfo" : "If you want to check the current balance of your address, go to <a href=\'http://www.blockchain.info\'>www.blockchain.info</a> and search for your Bitcoin address (<b>not</b> the private key, always keep the private key to yourself, the Bitcoin address is the one in the upper part of this page).",
+					"whatisbitcointitle" : "Che cosa è Bitcoin?",
+					"whatisbitcointext" : "Bitcoin è una moneta digitale, a disposizione di tutti, in tutto il mondo. E \'open source e decentralizzato, non controllati da una stessa entità. Può essere inviati tra individui senza il coinvolgimento di banche o società di carte di credito. Le transazioni sono praticamente immediata e con commissioni molto basse, spesso completamente gratuito. Per saperne di più su Bitcoin su <a href='http://www.weusecoins.com'>weusecoins.com</a> o fare una domanda su <a href='http://bitcoin.stackexchange.com'>Bitcoin StackExchange</a>.",
+					"payingfeestitle" : "Devo pagare le tasse?",
+					"payingfeestext" : "Poiché il ricevitore di una transazione non si deve pagare alcuna commissione. La persona che invia i fondi <i> volte </ i> deve pagare una piccola tassa, ma con Bitcoin la tassa è in realtà <b> piccolo </ b>, come in pochi centesimi.",
+					"isthissafetitle" : "E \'sicuro?",
+					"isthissafetext" : "Tutto su questa pagina viene eseguita in <b>tuo browser web</b> utilizzando JavaScript. Il tuo indirizzo Bitcoin e la chiave privata è stato generato da <b>computer</b> e non è stata condivisa con qualsiasi altro computer o essere umano. (È anche possibile scaricare questa pagina e utilizzarla su un computer non in linea.) Se si mantiene la chiave privata di sicurezza, il vostro denaro è al sicuro.",
+					"iwantrealmoneytitle" : "Ma io voglio \"reale\" soldi!",
+					"iwantrealmoneytext" : "Beh, prima di tutto, Bitcoin <i>è</i> soldi veri. Si consiglia di utilizzare i vostri bitcoins comprare qualcosa da uno di tutti i <a href=\'https://en.bitcoin.it/wiki/Trade#Online_products\'>mercanti</a> che accettano Bitcoin. Se ancora decide che si desidera convertire i vostri bitcoins in dollari o in qualche altra valuta ci sono una serie di modi per fare anche questo. Dai un\'occhiata alla lista href=\'https://en.bitcoin.it/wiki/Trade#Currency_exchanges\'> <a di scambio </ a>.",
+					"howdoiusebitcointitle" : "Come faccio a usare i miei bitcoins?",
+					"howdoiusebitcointext" : "Per poter utilizzare i vostri bitcoins è necessario importare la chiave privata di un portafoglio. Ci sono molti portafogli diversi, alcuni che è possibile scaricare ed eseguire sul proprio computer e alcuni che sono web based. Il modo più semplice è probabilmente quello di creare un portafoglio <a href='https://blockchain.info/wallet'>su blockchain.info</a> e poi per selezionare \"Importa / Esporta -> Importa chiave privata \". In un paio di minuti sarete pronti per inviare le bitcoins a chiunque, in qualsiasi parte del mondo.",
+					"pleasedonate" : "Si prega di donare se vi piace questa pagina:",
+					"pleaseenternewtext" : "Inserisci un nuovo testo:"
+				},
+				
 				"pl": {
 					"selectedlanguage": "Polski",
 					"header": "Przyjmuj darowizny w Bitcoinach już dziś!",
@@ -5475,6 +5540,37 @@
 					"pleaseenternewtext" : "Por favor digite o texto novo:"	
 				},
 				
+				"ru" : {
+					"selectedlanguage": "Русский",
+					"header": "Принимайте пожертвования в биткоинах!",
+					"lead": "Вы сможете всё настроить буквально через минуту, это очень просто. Нажмите кнопку \"Печать\" внизу, чтобы распечатать эту страницу. Разрежьте по пунктиру и сохраните нижнюю половину в надежном месте. Верхнюю часть повесьте на стену &mdash; и готово.",
+					"printbutton": "Печать",
+					"learnmorebutton" : "Узнать больше",
+					"printpagetitle" : "Мы принимаем<br/>пожертвования в биткоинах",
+					"printpagetitletooltip" : "Щелкните, чтобы изменить этот текст",
+					"btcaddresslabel" : "Чтобы пожертвовать, пожалуйста, отсканируйте QR-код слева или отправьте биткоины на следующий адрес:",
+					"btcaddresslabeltooltip" : "Щелкните, чтобы изменить этот текст",
+					"generatelabelbitcoinaddress" : "Для вас генерируется новый биткоин-адрес",
+					"generatelabelmovemouse" : "Пожалуйста, подвигайте мышкой, чтобы добавить случайности в процесс генерации...",
+					"publicareaintro" : "Биткоин &mdash; - цифровая валюта, доступная каждому во всём мире. Она имеет открытый исходный код и децентрализована &mdash; не контролируется каким-либо единым органом. Люди могут обмениваться ей без участия банков или компаний, выпускающих кредитные карты. Переводы происходят практически мгновенно и с очень низкой комиссией, часто вообще без нее.",
+					"publicareaintrotooltip" : "Щелкните, чтобы изменить этот текст",
+					"publicareafooter" : "Получать пожертвования в биткоинах очень просто! Вы сможете начать менее, чем за минуту на сайте http://accept.bitcoin.se",
+					"singlelabelprivatekey" : "Это ваш приватный ключ. Это ключ от ваших денег, <i>единственный</i> способ доступа к ним, поэтому храните его бережно. Ваш приватный ключ представлен здесь в двух разных форматах: слева в виде QR-кода, а снизу в \"формате импорта кошелька\", который можно использовать для импорта ключа в различные программы-кошельки и онлайн-кошельки.",
+					"privateareainfo" : "Чтобы проверить баланс своего адреса, зайдите на <a href='http://www.blockchain.info'>www.blockchain.info</a> и введите в поиск свой биткоин-адрес (<b>не</b> приватный ключ, его вы должны хранить в тайне, а адрес, который на странице вверху).",
+					"whatisbitcointitle" : "Что такое биткоин?",
+					"whatisbitcointext" : "Биткоин &mdash; - цифровая валюта, доступная каждому во всём мире. Она имеет открытый исходный код и децентрализована &mdash; не контролируется каким-либо единым органом. Люди могут обмениваться ей без участия банков или компаний, выпускающих кредитные карты. Переводы происходят практически мгновенно и с очень низкой комиссией, часто вообще без нее. Узнайте о биткоине больше на сайте <a href='http://www.weusecoins.com'>weusecoins.com</a> или задайте вопрос на <a href='http://bitcoin.stackexchange.com'>Bitcoin StackExchange</a>",
+					"payingfeestitle" : "Нужно ли платить комиссию за эту услугу?",
+					"payingfeestext" : "Вам как получателю переводов не надо ничего платить. Отправитель <i>в некоторых случаях</i> должен будет заплатить небольшую комиссию, но при использовании биткоинов она совсем <b>маленькая</b>, несколько копеек.",
+					"isthissafetitle" : "Это безопасно?",
+					"isthissafetext" : "Всё на этой странице выполняется внутри <b>вашего браузера</b> с помощью javascript. Ваш биткоин-адрес и приватный ключ сгенерировались <b>вашим компьютером</b> и <b>не передаются</b> на другой компьютер или другому человеку. (Вы даже можете сохранить эту страницу и использовать ее на неподключенном к интернету компьютере.) Если вы будете бережно хранить приватный ключ, ваши деньги в безопасности.",
+					"iwantrealmoneytitle" : "Но я хочу \"настоящих\" денег!",
+					"iwantrealmoneytext" : "Ну, во-первых, биткоин &mdash; <i>настоящие</i> деньги. Вы можете покупать на них товары в <a href='https://en.bitcoin.it/wiki/Trade#Online_products'>магазинах</a>, принимающих биткоины. На случай, если вы решите перевести свои биткоины в доллары или другую валюту, есть много способов это сделать. Посмотрите в списке <a href='https://en.bitcoin.it/wiki/Trade#Currency_exchanges'>обменных пунктов</a>.",
+					"howdoiusebitcointitle" : "Как мне использовать полученные биткоины?",
+					"howdoiusebitcointext" : "Для того, чтобы использовать биткоины, вам надо импортировать свой приватный ключ в кошелек. Существует много разных кошельков, некоторые надо скачать и установить на компьютер, другие работают через веб. Пожалуй, самый простой способ &mdash; создать <a href='https://blockchain.info/wallet'>кошелек на blockchain.info</a> и затем выбрать \"Импорт / Экспорт -> Import Private Key\". Уже через пару минут вы будете готовы отправлять биткоины кому угодно, куда угодно.",
+					"pleasedonate" : "Пожалуйста, пожертвуйте, если вам понравилась эта страница:",
+					"pleaseenternewtext" : "Пожалуйста, введите новый текст:"
+				},
+
 				"sk" : {
 					"selectedlanguage": "Slovensky",
 					"header": "Príjmite Bitcoin donáciu dnes!",
